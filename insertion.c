@@ -14,12 +14,16 @@ int main(){
 	printf("\nEnter the loacation where you want to insert= ");
 	scanf("%d",&loc);
 	n=n+1;
+	if(loc<n){
 	for(int i=n-1;i>=loc;i--){
 		arr[i]=arr[i-1];
 	}
-	arr[pos]=num;
+	arr[loc]=num;
 	for(int i=0;i<n;i++){
 		printf("%d\t",arr[i]);
 	}
+}else{
+	printf("Location which you entered is out of bound");
+}
 return 0;
 }
